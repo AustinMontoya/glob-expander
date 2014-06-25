@@ -1,0 +1,27 @@
+{
+  "name": "glob-expander",
+  "version": "0.0.0",
+  "description": "expand a glob into an equivalent list of subdirectories",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grrizzly/glob-expander.git"
+  },
+  "keywords": [
+    "glob",
+    "files",
+    "directories"
+  ],
+  "author": "Austin Montoya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grrizzly/glob-expander/issues"
+  },
+  "homepage": "https://github.com/grrizzly/glob-expander",
+  "devDependencies": {
+    "mocha": "~1.20.1"
+  }
+}
