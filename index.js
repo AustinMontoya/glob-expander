@@ -1,6 +1,5 @@
 var fs = require('fs');
 var path = require('path');
-var _ = require('lodash');
 
 function processPath(basePath, rest, result) {
   result.push(path.join(basePath, rest));
