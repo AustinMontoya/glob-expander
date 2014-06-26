@@ -1,6 +1,6 @@
 {
   "name": "glob-expander",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "expand a glob into an equivalent list of subdirectories",
   "main": "index.js",
   "scripts": {
