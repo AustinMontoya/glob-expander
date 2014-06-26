@@ -37,5 +37,5 @@ expandGlob('public/**/*.js'); // ['public/js/*.js', 'public/js/app/*.js', 'publi
 
 // Expand multiple globs 
 expandGlob(['public/**/*.js', 'server/**']); 
-// ['public/js/*.js', 'public/js/app/*.js', 'public/js/test/*.js', 'server/**', 'server/routes/**'] 
+// ['public/js/*.js', 'public/js/app/*.js', 'public/js/test/*.js', 'server/*', 'server/routes/*'] 
 ```
