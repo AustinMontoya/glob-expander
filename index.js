@@ -3,6 +3,7 @@ var path = require('path');
 
 function processPath(basePath, rest, result) {
   result.push(path.join(basePath, rest));
+
   fs.readdirSync(basePath).forEach(function (entry) {
     var relativePath = path.join(basePath, entry);
     if (fs.statSync(relativePath).isDirectory()) {
@@ -26,6 +27,17 @@ module.exports = function (patterns) {
     }
 
     var basePath = pattern.substr(0, globStart);
+
+    // If the part without the '**' isn't a valid directory
+    // just add it and leave. 
+    try {
+      fs.statSync(basePath)
+    } catch(err) {
+      console.warn('glob-expander: skipping ' + basePath + ' because it cannot be expanded');
+      expansions.push(pattern);
+      return;
+    }
+
     var rest = pattern.substr(globStart + 2, globStart.length);
     if (!rest) rest = '*';
     processPath(basePath, rest, expansions);

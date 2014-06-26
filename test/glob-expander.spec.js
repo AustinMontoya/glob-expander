@@ -32,6 +32,10 @@ describe("glob expander", function () {
 		expect(expandGlob('public')).to.eql(['public']);
 	});
 
+	it("should pass through items that cannot be expanded", function () {
+		expect(expandGlob('!server')).to.eql(['!server']);
+	});
+
 	it("should process an array of globs", function () {
 		expect(expandGlob(['public/js/app/**', 'server/**/*.js'])).to.eql(['public/js/app/*', 'server/*.js', 'server/routes/*.js']);
 	});

@@ -3,6 +3,8 @@ Expand your globs into an equivalent list of directories.
 
 This was primarily created to work around the [gaze issue](https://github.com/shama/gaze/pull/103) that prevents files being added in subdirectories from being picked up as part of the watch process.
 
+Note that this does not attempt to expand more complex minimatch patterns, like those including brackets or negations; instead, it returns the original pattern as part of the result.
+
 Installs via npm: 
 
 ```bash
